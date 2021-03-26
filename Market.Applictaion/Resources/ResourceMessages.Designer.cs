@@ -115,6 +115,15 @@ namespace Market.Applictaion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Product has been successfully deleted..
+        /// </summary>
+        internal static string SuccessfullyDeleted {
+            get {
+                return ResourceManager.GetString("SuccessfullyDeleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Product has been successfully updated..
         /// </summary>
         internal static string SuccessfullyUpdate {

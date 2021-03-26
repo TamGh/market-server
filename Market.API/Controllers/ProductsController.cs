@@ -45,5 +45,12 @@ namespace Market.API.Controllers
             var commandResult = await _mediator.Send(new UpdateProdcutCommand(product));
             return Ok(commandResult);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProduct(long id)
+        {
+            var commandResult = await _mediator.Send(new DeleteProductCommand(id));
+            return Ok(commandResult);
+        }
     }
 }
