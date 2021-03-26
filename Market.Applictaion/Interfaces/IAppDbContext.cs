@@ -4,8 +4,8 @@ using System;
 
 namespace Market.Applictaion.Interfaces
 {
-    public interface IAppDbContext : IDisposable
+    public interface IAppDbContext
     {
-        DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

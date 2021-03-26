@@ -7,6 +7,7 @@ namespace Market.Applictaion.Interfaces
     public interface IProductRepository
     {
         Task<bool> ProductExists(string name, CancellationToken cancellationToken);
+        Task<bool> ProductExists(string name, long id, CancellationToken cancellationToken);
         Task<Product> GetByIdAsync(long id, CancellationToken cancellationToken);
         Task AddAsync(Product product, CancellationToken cancellationToken);
         Task UpdateAsync(Product product, CancellationToken cancellationToken);

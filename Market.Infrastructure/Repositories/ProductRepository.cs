@@ -20,19 +20,23 @@ namespace Market.Infrastructure.Repositories
             return await _context.Products.AnyAsync(x => x.Name == name, cancellationToken);
         }
 
+        public async Task<bool> ProductExists(string name, long id, CancellationToken cancellationToken)
+        {
+            return await _context.Products.AnyAsync(x => x.Name == name && x.Id != id, cancellationToken);
+        }
+
         public async Task AddAsync(Product product, CancellationToken cancellationToken)
         {
             await _context.Products.AddAsync(product, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
         }
-
-        public async Task RemoveAsync(Product product, CancellationToken cancellationToken)
+        public async Task UpdateAsync(Product product, CancellationToken cancellationToken)
         {
             _context.Products.Update(product);
             await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task UpdateAsync(Product product, CancellationToken cancellationToken)
+        public async Task RemoveAsync(Product product, CancellationToken cancellationToken)
         {
             _context.Products.Remove(product);
             await _context.SaveChangesAsync(cancellationToken);
