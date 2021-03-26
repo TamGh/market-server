@@ -13,5 +13,36 @@ namespace Market.Domain.Models
         [Required]
         public string Description { get; private set; }
         public DateTime DateCreated { get; private set; }
+
+        public Product Update(Product product)
+        {
+            this.Name = product.Name;
+            this.Price = product.Price;
+            this.Available = product.Available;
+            this.Description = product.Description;
+
+            return this;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Product)
+            {
+                Product source = obj as Product;
+                if (Name != source.Name || Price != source.Price || Available != source.Available || Description != source.Description)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

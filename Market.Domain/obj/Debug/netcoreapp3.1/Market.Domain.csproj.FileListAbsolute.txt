@@ -7,3 +7,12 @@ D:\Product\Market_Server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.Ass
 D:\Product\Market_Server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.csproj.CoreCompileInputs.cache
 D:\Product\Market_Server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.dll
 D:\Product\Market_Server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.pdb
+C:\Market\market-server\Market.Domain\bin\Debug\netcoreapp3.1\Market.Domain.deps.json
+C:\Market\market-server\Market.Domain\bin\Debug\netcoreapp3.1\Market.Domain.dll
+C:\Market\market-server\Market.Domain\bin\Debug\netcoreapp3.1\Market.Domain.pdb
+C:\Market\market-server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.csprojAssemblyReference.cache
+C:\Market\market-server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.AssemblyInfoInputs.cache
+C:\Market\market-server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.AssemblyInfo.cs
+C:\Market\market-server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.csproj.CoreCompileInputs.cache
+C:\Market\market-server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.dll
+C:\Market\market-server\Market.Domain\obj\Debug\netcoreapp3.1\Market.Domain.pdb

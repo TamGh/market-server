@@ -9,6 +9,7 @@ namespace Market.Applictaion.Mappings
         public ProductProfile()
         {
             CreateMap<ProductDTO, Product>();
+            CreateMap<UpdateProductDTO, Product>();
         }
     }
 }
