@@ -88,6 +88,15 @@ namespace Market.Applictaion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No changes are done for current product..
+        /// </summary>
+        internal static string NoChangesAreDone {
+            get {
+                return ResourceManager.GetString("NoChangesAreDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Product has been successfully created..
         /// </summary>
         internal static string SuccesfullyCreated {

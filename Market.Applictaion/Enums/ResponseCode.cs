@@ -19,8 +19,12 @@ namespace Market.Applictaion.Enums
         [ResponseCode(ResponseType.Success)]
         SuccesfullyCreated,
         [ResponseCode(ResponseType.Success)]
-        SuccessfullyUpdate
+        SuccessfullyUpdate,
         #endregion
 
+        #region Info
+        [ResponseCode(ResponseType.Info)]
+        NoChangesAreDone
+        #endregion
     }
 }

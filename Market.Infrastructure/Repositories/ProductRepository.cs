@@ -37,5 +37,10 @@ namespace Market.Infrastructure.Repositories
             _context.Products.Remove(product);
             await _context.SaveChangesAsync(cancellationToken);
         }
+
+        public async Task<Product> GetByIdAsync(long id, CancellationToken cancellationToken)
+        {
+            return await _context.Products.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+        }
     }
 }

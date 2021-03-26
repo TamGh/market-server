@@ -23,5 +23,12 @@ namespace Market.API.Controllers
             var commandResult = await _mediator.Send(new AddProdcutCommand(product));
             return Ok(commandResult);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateProduct([FromBody] UpdateProductDTO product)
+        {
+            var commandResult = await _mediator.Send(new UpdateProdcutCommand(product));
+            return Ok(commandResult);
+        }
     }
 }
