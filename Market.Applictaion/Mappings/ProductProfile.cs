@@ -10,6 +10,9 @@ namespace Market.Applictaion.Mappings
         {
             CreateMap<ProductDTO, Product>();
             CreateMap<UpdateProductDTO, Product>();
+
+            CreateMap<Product, ProductListItemDTO>();
+            CreateMap<Product, ProductViewDTO>();
         }
     }
 }

@@ -39,12 +39,17 @@ namespace Market.Applictaion.UseCases.Commands
                 {
                     return ResponseModel.Create(ResponseCode.DoesNotExist);
                 }
+                if (await _productRepository.ProductExists(request.Product.Name, request.Product.Id, cancellationToken))
+                {
+                    return ResponseModel.Create(ResponseCode.AlreadyExists);
+                }
                 var sourceProduct = _mapper.Map<Product>(request.Product);
                 if (targetProduct.Equals(sourceProduct))
                 {
                     return ResponseModel.Create(ResponseCode.NoChangesAreDone);
                 }
-                await _productRepository.UpdateAsync(targetProduct.Update(sourceProduct), cancellationToken);
+                targetProduct.Update(sourceProduct);
+                await _productRepository.UpdateAsync(targetProduct, cancellationToken);
                 return ResponseModel.Create(ResponseCode.SuccessfullyUpdate);
             }
         }

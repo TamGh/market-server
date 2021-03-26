@@ -1,5 +1,6 @@
 ﻿using Market.Applictaion.DTOs;
 using Market.Applictaion.UseCases.Commands;
+using Market.Applictaion.UseCases.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -15,6 +16,20 @@ namespace Market.API.Controllers
         public ProductsController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetProducts()
+        {
+            var quesryResult = await _mediator.Send(new GetProductsQuery());
+            return Ok(quesryResult);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProduct(long id)
+        {
+            var quesryResult = await _mediator.Send(new GetProductByIdQuery(id));
+            return Ok(quesryResult);
         }
 
         [HttpPost]

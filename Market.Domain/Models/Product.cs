@@ -14,14 +14,12 @@ namespace Market.Domain.Models
         public string Description { get; private set; }
         public DateTime DateCreated { get; private set; }
 
-        public Product Update(Product product)
+        public void Update(Product product)
         {
             this.Name = product.Name;
             this.Price = product.Price;
             this.Available = product.Available;
             this.Description = product.Description;
-
-            return this;
         }
 
         public override bool Equals(object obj)
