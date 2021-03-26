@@ -20,6 +20,8 @@ namespace Market.Applictaion.Enums
         SuccesfullyCreated,
         [ResponseCode(ResponseType.Success)]
         SuccessfullyUpdate,
+        [ResponseCode(ResponseType.Success)]
+        SuccessfullyDeleted,
         #endregion
 
         #region Info

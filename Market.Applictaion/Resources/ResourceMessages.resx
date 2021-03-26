@@ -135,6 +135,9 @@
   <data name="Success" xml:space="preserve">
     <value>Success message.</value>
   </data>
+  <data name="SuccessfullyDeleted" xml:space="preserve">
+    <value>Product has been successfully deleted.</value>
+  </data>
   <data name="SuccessfullyUpdate" xml:space="preserve">
     <value>Product has been successfully updated.</value>
   </data>
