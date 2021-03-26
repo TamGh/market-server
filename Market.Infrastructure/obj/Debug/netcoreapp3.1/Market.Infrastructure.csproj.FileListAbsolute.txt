@@ -1,0 +1,14 @@
+D:\Product\Market_Server\Market.Infrastructure\bin\Debug\netcoreapp3.1\Market.Domain.dll
+D:\Product\Market_Server\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.csprojAssemblyReference.cache
+D:\Product\Market_Server\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.AssemblyInfoInputs.cache
+D:\Product\Market_Server\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.AssemblyInfo.cs
+D:\Product\Market_Server\Market.Infrastructure\bin\Debug\netcoreapp3.1\Market.Infrastructure.deps.json
+D:\Product\Market_Server\Market.Infrastructure\bin\Debug\netcoreapp3.1\Market.Infrastructure.dll
+D:\Product\Market_Server\Market.Infrastructure\bin\Debug\netcoreapp3.1\Market.Infrastructure.pdb
+D:\Product\Market_Server\Market.Infrastructure\bin\Debug\netcoreapp3.1\Market.Domain.pdb
+D:\Product\Market_Server\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Product\Market_Server\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.csproj.CopyComplete
+D:\Product\Market_Server\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.dll
+D:\Product\Market_Server\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.pdb
+D:\Product\Market_Server\Market.Infrastructure\bin\Debug\netcoreapp3.1\Market.Applictaion.dll
+D:\Product\Market_Server\Market.Infrastructure\bin\Debug\netcoreapp3.1\Market.Applictaion.pdb
