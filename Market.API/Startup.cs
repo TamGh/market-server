@@ -1,9 +1,12 @@
+using Market.API.Extensions;
 using Market.API.Middlewares;
+using Market.Applictaion.Authentication;
 using Market.Applictaion.Exstendions;
 using Market.Applictaion.Interfaces;
 using Market.Infrastructure;
 using Market.Infrastructure.Extensions;
 using Market.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -11,6 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using System.Text.Json;
 
 namespace Market.API
@@ -26,6 +31,9 @@ namespace Market.API
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<AuthOptions>(Configuration.GetSection("AuthOptions")).AddOptions();
+            services.AddJwtAuthentication(Configuration);
+
 
             services.AddControllers()
                  .AddJsonOptions(options =>
@@ -52,6 +60,7 @@ namespace Market.API
             #endregion
 
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddSingleton<IAuthenticationService, AuthenticationService>();
 
             services.AddMapper();
             services.AddMediator();
@@ -66,9 +75,11 @@ namespace Market.API
             }
 
             app.UseRouting();
-            app.UseExceptionMiddleware();
+            app.UseMiddleware<ExceptionMiddleware>();
             app.UseDatabaseMigration();
             app.UseCors("CorsPolicy");
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

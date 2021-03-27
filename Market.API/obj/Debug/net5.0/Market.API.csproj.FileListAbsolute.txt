@@ -70,3 +70,6 @@ C:\Market\market-server\Market.API\obj\Debug\net5.0\Market.API.dll
 C:\Market\market-server\Market.API\obj\Debug\net5.0\ref\Market.API.dll
 C:\Market\market-server\Market.API\obj\Debug\net5.0\Market.API.pdb
 C:\Market\market-server\Market.API\obj\Debug\net5.0\Market.API.genruntimeconfig.cache
+C:\Market\market-server\Market.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+C:\Market\market-server\Market.API\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
+C:\Market\market-server\Market.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

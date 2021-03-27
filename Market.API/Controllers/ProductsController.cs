@@ -2,12 +2,15 @@
 using Market.Applictaion.UseCases.Commands;
 using Market.Applictaion.UseCases.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace Market.API.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [ApiController]
     public class ProductsController : ControllerBase
     {
@@ -17,14 +20,14 @@ namespace Market.API.Controllers
         {
             _mediator = mediator;
         }
-
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
             var quesryResult = await _mediator.Send(new GetProductsQuery());
             return Ok(quesryResult);
         }
-
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProduct(long id)
         {
