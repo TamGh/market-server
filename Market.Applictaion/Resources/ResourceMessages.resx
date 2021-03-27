@@ -126,6 +126,9 @@
   <data name="Failed" xml:space="preserve">
     <value>Something went wrong.</value>
   </data>
+  <data name="InvalidUser" xml:space="preserve">
+    <value>Username or password is not valid.</value>
+  </data>
   <data name="NoChangesAreDone" xml:space="preserve">
     <value>No changes are done for current product.</value>
   </data>

@@ -88,6 +88,15 @@ namespace Market.Applictaion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Username or password is not valid..
+        /// </summary>
+        internal static string InvalidUser {
+            get {
+                return ResourceManager.GetString("InvalidUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No changes are done for current product..
         /// </summary>
         internal static string NoChangesAreDone {

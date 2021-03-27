@@ -11,6 +11,8 @@ namespace Market.Applictaion.Enums
         AlreadyExists,
         [ResponseCode(ResponseType.Error)]
         DoesNotExist,
+        [ResponseCode(ResponseType.Error)]
+        InvalidUser,
         #endregion
 
         #region Success
