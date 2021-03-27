@@ -1,6 +1,7 @@
 ﻿using Market.Applictaion.DTOs;
 using Market.Applictaion.Enums;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Net;
 using System.Text.Json;
@@ -27,11 +28,14 @@ namespace Market.API.Middlewares
             {
                 await _request(context);
             }
-
+            catch (DbUpdateConcurrencyException concurencyException)
+            {
+                string message = "The product availability you want to update has already been changed by another user.";
+                var response = ResponseModel<object>.Create(ResponseType.Error, null, message);
+                await InvokeException(context, HttpStatusCode.OK, response);
+            }
             catch (Exception exception)
             {
-
-
                 var response = GenerateResponse(exception);
                 await InvokeException(context, HttpStatusCode.InternalServerError, response);
             }
