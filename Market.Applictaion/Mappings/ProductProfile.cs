@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Market.Applictaion.DTOs;
+using Market.Applictaion.Exstendions;
 using Market.Domain.Models;
 
 namespace Market.Applictaion.Mappings
@@ -8,11 +9,11 @@ namespace Market.Applictaion.Mappings
     {
         public ProductProfile()
         {
-            CreateMap<ProductDTO, Product>();
-            CreateMap<UpdateProductDTO, Product>();
+            CreateMap<ProductDTO, Product>().IgnoreAllNonExisting();
+            CreateMap<UpdateProductDTO, Product>().IgnoreAllNonExisting();
 
-            CreateMap<Product, ProductListItemDTO>();
-            CreateMap<Product, ProductViewDTO>();
+            CreateMap<Product, ProductListItemDTO>().IgnoreAllNonExisting();
+            CreateMap<Product, ProductViewDTO>().IgnoreAllNonExisting();
         }
     }
 }

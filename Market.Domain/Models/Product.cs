@@ -5,6 +5,30 @@ namespace Market.Domain.Models
 {
     public class Product
     {
+
+        public Product()
+        {
+
+        }
+
+        public Product(long id, string name, decimal price, bool available, string description, DateTime dateCreated) : this(id, name, price, available, description)
+        {
+            DateCreated = dateCreated;
+        }
+
+        public Product(long id, string name, decimal price, bool available, string description) : this(name, price, available, description)
+        {
+            Id = id;
+        }
+
+        public Product(string name, decimal price, bool available, string description)
+        {
+            Name = name;
+            Price = price;
+            Available = available;
+            Description = description;
+        }
+
         public long Id { get; private set; }
         [Required]
         public string Name { get; private set; }
