@@ -14,9 +14,6 @@ namespace Market.Applictaion.Resources
 
             return (codeAttribute.ResponseType, message);
         }
-
-        public static string GetResourceMessage(this ResponseCode responseCode) => GetResource(responseCode).Message;
-
         private static string GetResourceMessageValue(string key) => ResourceMessages.ResourceManager.GetString(key) ?? key;
     }
 }

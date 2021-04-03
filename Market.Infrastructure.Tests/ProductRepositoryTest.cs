@@ -1,4 +1,4 @@
-﻿using Market.Domain.Models;
+﻿using Market.Domain.Entities;
 using Market.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -98,8 +97,5 @@ namespace Market.Infrastructure.Tests
             }, token);
             await _context.SaveChangesAsync(token);
         }
-
-
-
     }
 }

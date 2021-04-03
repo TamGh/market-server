@@ -1,5 +1,5 @@
 ﻿using Market.Applictaion.Interfaces;
-using Market.Domain.Models;
+using Market.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
@@ -33,6 +33,8 @@ namespace Market.Infrastructure.Repositories
         public async Task UpdateAsync(Product product, CancellationToken cancellationToken)
         {
             _context.Products.Update(product);
+            //_context.Database.ExecuteSqlRaw(
+            //  "UPDATE dbo.Products SET Available = 0 WHERE Id = 7");
             await _context.SaveChangesAsync(cancellationToken);
         }
 

@@ -1,4 +1,4 @@
-﻿using Market.Domain.Models;
+﻿using Market.Domain.Entities;
 using System.Threading;
 using System.Threading.Tasks;
 

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Market.Applictaion.DTOs;
 using Market.Applictaion.Exstendions;
-using Market.Domain.Models;
+using Market.Domain.Entities;
 
 namespace Market.Applictaion.Mappings
 {

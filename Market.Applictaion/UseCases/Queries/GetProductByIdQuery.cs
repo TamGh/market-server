@@ -30,7 +30,7 @@ namespace Market.Applictaion.UseCases.Queries
             }
             public async Task<ResponseModel<ProductViewDTO>> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
             {
-                var queryResult = _mapper.Map<ProductViewDTO>(await _context.Products.FirstOrDefaultAsync(x => x.Id == request.Id));
+                var queryResult = _mapper.Map<ProductViewDTO>(await _context.Products.AsNoTracking().FirstOrDefaultAsync(x => x.Id == request.Id));
                 if (queryResult == null)
                 {
                     ResponseModel<ProductViewDTO>.Create(ResponseCode.DoesNotExist, queryResult);

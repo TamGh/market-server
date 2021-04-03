@@ -3,7 +3,7 @@ using Market.Applictaion.DTOs;
 using Market.Applictaion.Enums;
 using Market.Applictaion.Interfaces;
 using Market.Applictaion.UseCases.Commands;
-using Market.Domain.Models;
+using Market.Domain.Entities;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;

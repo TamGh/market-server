@@ -1,5 +1,5 @@
 ﻿using Market.Applictaion.DTOs;
-using Market.Domain.Models;
+using Market.Domain.Entities;
 using NUnit.Framework;
 using System;
 

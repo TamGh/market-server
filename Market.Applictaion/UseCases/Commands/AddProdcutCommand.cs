@@ -2,7 +2,7 @@
 using Market.Applictaion.DTOs;
 using Market.Applictaion.Enums;
 using Market.Applictaion.Interfaces;
-using Market.Domain.Models;
+using Market.Domain.Entities;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;

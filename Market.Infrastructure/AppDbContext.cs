@@ -1,5 +1,5 @@
 ﻿using Market.Applictaion.Interfaces;
-using Market.Domain.Models;
+using Market.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
